@@ -8,6 +8,10 @@
         "maxLambdaSize": "15mb",
         "runtime": "python3.8.5",
         "buildCommand": "./build_files.sh"
+      },
+      "env": {
+        "MYSQLCLIENT_CFLAGS": "",
+        "MYSQLCLIENT_LDFLAGS": ""
       }
     }
   ],
