@@ -1,25 +1,18 @@
 # Print a message to check if the script is executed
 echo "Start executing build_files.sh script"
 
-# !/bin/bash
 # Set MySQL client environment variables
 export MYSQLCLIENT_CFLAGS=""
-export MYSQLCLIENT_LDFLAGS="" 
+export MYSQLCLIENT_LDFLAGS=""
 
-# Print current working directory
-echo "Current directory: $(pwd)"
-
-# List contents of the current directory
-echo "Directory contents: $(ls)"
+# Get the current working directory
+CURRENT_DIR=$(pwd)
 
 # Assuming your Django project is in the AWM directory
-cd AWM
-
-# List contents of the current directory
-echo "Directory contents: $(ls)" 
+cd "$CURRENT_DIR/AWM"
 
 # Install dependencies
-pip install -r AWM/requirements.txt 
+pip install -r requirements.txt
 
 # Install mysqlclient manually
 pip install mysqlclient
