@@ -5,12 +5,19 @@ echo "Start executing build_files.sh script"
 export MYSQLCLIENT_CFLAGS=""
 export MYSQLCLIENT_LDFLAGS=""
 
+# Print current working directory
+echo "Current directory: $(pwd)"
+
+# List contents of the current directory
+echo "Directory contents: $(ls)"
+
 # Get the current working directory
 CURRENT_DIR=$(pwd)
 
 # Assuming your Django project is in the AWM directory
 cd "$CURRENT_DIR/AWM"
-
+# List contents of the current directory
+echo "Directory contents: $(ls)"
 # Install dependencies
 pip install -r requirements.txt
 
