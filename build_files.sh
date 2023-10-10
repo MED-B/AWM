@@ -14,8 +14,6 @@ echo "Directory contents: $(ls)"
 # Get the current working directory
 CURRENT_DIR=$(pwd)
 
-# Assuming your Django project is in the AWM directory
-cd "$CURRENT_DIR/AWM"
 # List contents of the current directory
 echo "Directory contents: $(ls)"
 # Install dependencies
