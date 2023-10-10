@@ -20,7 +20,7 @@ echo "Directory contents: $(ls)"
 pip install -r requirements.txt
 
 # Install mysqlclient manually
-pip install mysqlclient
+pip install mysql-connector-python
 
 # Collect static files
 python manage.py collectstatic --noinput
