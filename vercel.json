@@ -2,16 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "AWM/**",
+      "src": "AWM/wsgi.py",
       "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    },
+    {
+      "src": "build_files.sh",
+      "use": "@vercel/static-build",
       "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.8.5",
-        "buildCommand": "./build_files.sh"
+        "distDir": "staticfiles_build"
       }
     }
   ],
   "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "AWM/wsgi.py"
