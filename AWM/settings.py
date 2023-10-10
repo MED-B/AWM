@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'AWM.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.pymysql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blpoazewpempkm3socxy',
         'USER': 'ucznqnq45dzp5gz8',
         'PASSWORD': 'wQ2QXHcmas4D3x8u0SM3',
