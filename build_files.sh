@@ -1,5 +1,5 @@
 # Print a message to check if the script is executed
-echo "Executing build_files.sh script"
+echo "Start executing build_files.sh script"
 
 # !/bin/bash
 # Set MySQL client environment variables
@@ -10,10 +10,12 @@ export MYSQLCLIENT_LDFLAGS=""
 cd AWM
 
 # Install dependencies
-pip install -r requirements.txt 
+# pip install -r requirements.txt 
 
 # Install mysqlclient manually
 pip install mysqlclient
 
 # Collect static files
 python manage.py collectstatic --noinput
+
+echo "End executing build_files.sh script"
