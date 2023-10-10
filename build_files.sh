@@ -1,4 +1,7 @@
-#!/bin/bash
+# Print a message to check if the script is executed
+echo "Executing build_files.sh script"
+
+# !/bin/bash
 # Set MySQL client environment variables
 export MYSQLCLIENT_CFLAGS=""
 export MYSQLCLIENT_LDFLAGS="" 
