@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "AWM/wsgi.py",
+        "use": "@vercel/python",
+        "config":{"maxLambdaSize":"15mb","runtime":"python3.8.5"}
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "AWM/wsgi.py"
+      }
+    ]
+  }
+  

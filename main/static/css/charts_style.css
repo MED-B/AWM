@@ -1,0 +1,15 @@
+#userPieChart, #companyPieChart {
+  min-width: 30vw!important;
+  max-width: 30vw !important;
+  min-height: 30vh!important;
+  max-height: 30vh !important;
+}
+#companyTypeBarChart{
+  min-width: 30vw!important;
+  max-width: 30vw !important;
+  min-height: 30vh!important;
+  max-height: 70vh !important;
+}
+canvas{
+  margin: 1rem;
+}

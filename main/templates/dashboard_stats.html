@@ -1,0 +1,71 @@
+{% load admin_urls %}{% load static %} {% block content %}
+<!-- Include Bootstrap CSS -->
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+/>
+<link rel="stylesheet" href="{% static 'css/charts_style.css' %}" />
+
+<div class="container">
+  <!--User Infos-->
+  {% include 'users_infos.html' %}
+  <!--Cetaficates & factories & expositions & companies infos-->
+  {% include 'general_infos.html' %}
+  <!--Distribution of users and companies-->
+    <div class="row">
+        <div class="col-md-6">
+        <!-- users Pie chart container -->
+        <canvas id="userPieChart"></canvas>
+        </div>
+        <div class="col-md-6">
+        <!-- companies Pie chart container -->
+        <canvas id="companyPieChart"></canvas>
+        </div>
+    </div>
+    <!--Distribution infos for sectors-->
+    <div class="row">
+        <div class="col-md-6">
+        <!-- companies per type bars chart container -->
+        <canvas id="companyTypeBarChart"></canvas>
+        </div>
+        <div class="col-md-6">
+        <!-- companies per sectors bars chart container -->
+        <canvas id="companySectorBarChart"></canvas>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+      <!-- products per sectors bars chart container -->
+      <canvas id="productSectorBarChart"></canvas>
+      </div>
+      <div class="col-md-6">
+      <!-- AVG rating per sectors bars chart container -->
+      <canvas id="avgRatingSectorBarChart"></canvas>
+      </div>
+    </div>
+    <!--Messages & Chats infos-->
+    
+    
+  
+
+  <!-- Include Bootstrap and Chart.js scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Define the URL for fetching the data
+    const url_user_info = '{% url "user_info" %}';
+    const url_company_info ="{% url 'company_info' %}";
+    const url_general_infos = "{% url 'general_infos' %}";
+    const url_sector_distribution = "{% url 'sector_distribution' %}";
+  </script>
+  <!-- Include custom JavaScript file -->
+  <script src="{% static 'js/user_infos.js' %}"></script>
+  <script src="{% static 'js/user_chart.js' %}"></script>
+  <script src="{% static 'js/company_chart.js' %}"></script>
+  <script src="{% static 'js/company_infos.js' %}"></script>
+  <script src="{% static 'js/sectors_charts.js' %}"></script>
+</div>
+
+{% endblock %}
