@@ -1,7 +1,7 @@
 # Print a message to check if the script is executed
 echo "Start executing build_files.sh script"
 
-
+cd AWM
 # Collect static files
 python manage.py collectstatic --noinput
 
