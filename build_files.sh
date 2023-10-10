@@ -2,8 +2,8 @@
 echo "Start executing build_files.sh script"
 
 # Set MySQL client environment variables
-export MYSQLCLIENT_CFLAGS=""
-export MYSQLCLIENT_LDFLAGS=""
+export MYSQLCLIENT_CFLAGS="pkg-config mysqlclient --cflags"
+export MYSQLCLIENT_LDFLAGS="pkg-config mysqlclient --libs"
 
 # Print current working directory
 echo "Current directory: $(pwd)"
