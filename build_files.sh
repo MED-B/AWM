@@ -7,7 +7,10 @@ export MYSQLCLIENT_LDFLAGS=""
 cd AWM
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r requirements.txt 
+
+# Install mysqlclient manually
+pip install mysqlclient
 
 # Collect static files
 python manage.py collectstatic --noinput
