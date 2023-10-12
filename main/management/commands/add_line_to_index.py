@@ -5,7 +5,7 @@ class Command(BaseCommand):
     help = 'Add a line to the index file'
 
     def handle(self, *args, **kwargs):
-        file_path = 'path/to/jazzmin/templates/admin/index.html'
+        file_path = '.venv/lib/python3.7/site-packages/jazzmin/templates/admin/index.html'
         new_line = "{% include 'dashboard_stats.html' %}\n"
 
         with open(file_path, 'r') as file:
